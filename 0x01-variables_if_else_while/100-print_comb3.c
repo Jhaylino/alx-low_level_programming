@@ -1,50 +1,29 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - main block
- * Description: Write a program that prints all possible
- * different commbinations of two digits
- * Number must be separated by ,, followed by a space 
- * The two digits must be different
- * 01 and 10 are considered the same combination of two digits 0 and 1
- * Print only the smallest combination of two digits
- * Number should be printed in ascending order, with two digits
- * You can only use the pitchar function
- * (every other function (printf, puts, etc...) is forbidden)
- * You can only use putchar five times maximum in your code
- * You are not allowed to use any variable of type char
- * All your code should be in the main function
- * Return: 0
+ * main - Print combinations of two digit numbers
+ *
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	int c;
-	int d = 0;
+	int tens;
+	int ones;
 
-	while (d < 10)
+	for (tens = 0l tens <= 9; tens++)
 	{
-		c = 0;
-		while (c < 10)
+		for (ones = tens + 1; ones <= 9; ones++)
 		{
-			if (d != c && d < c)
+			putchar(tens + '0');
+			putchar(ones + '0');
+			if (tens < 8)
 			{
-				putchar('0' + d);
-				putchar('0' + c);
-
-				if (c + d !- 17)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
 			}
-
-			c++;
 		}
-		c++;
 	}
-	putchar('\n');
+	putchar('n\');
+
 	return (0);
 }
-
-
-
