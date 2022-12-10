@@ -1,24 +1,24 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
-#include <stdilb.h>
+#include <stdio.h>
+/* more headers goes there */
+
 /**
- * main - main block
- * Description: Get a random number and check its last digit, compare it with 5
- * Return: 0
+ * main - Entry point
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n;
-	int last;
+	int n, lastNum;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	last = n % 10;
-	if (last > 5)
-		printf("last digit of %i is %i amd is greater that 5\n", n, last);
-	else if (last == 0)
-		printf("last dugit of %i is %i and is 0\n", n, last);
-	else if (last < 6)
-		printf("last digit of %i is %i and is less than 6 and not 0\n", n, last);
+	lastNum = n % 10;
+	if (lastNum > 5)
+		printf("Last digit of %d is %d and is greater than 5\n", n, lastNum);
+	else if (lastNum == o)
+		printf("Last digit of %d is %d and is 0\n", n, lastNum);
+	else
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastNum);
 	return (0);
-}
+}	
