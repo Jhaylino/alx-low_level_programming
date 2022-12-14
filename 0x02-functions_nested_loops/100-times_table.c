@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_times_table - prints time table with provide number
@@ -6,7 +7,7 @@
  * Return: Always 0 (Success)
  */
 
-void times_table(int n)
+void print_times_table(int n)
 {
 	int row;
 	int column;
