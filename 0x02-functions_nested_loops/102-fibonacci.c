@@ -8,7 +8,7 @@
 int main(void)
 {
 	int count;
-	unsigned long fib1 = 0, fibz = 1, suml
+	unsigned long fib1 = 0, fibz = 1, sum;
 
 		for (count =0; count < 50; count++)
 		{
