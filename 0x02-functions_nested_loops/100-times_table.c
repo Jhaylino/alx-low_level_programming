@@ -17,11 +17,11 @@ void print_times_table(int n)
 		return;
 	for (row = 0; row <= n; row++)
 	{
-		for (column = 0; colum <= n; column++)
+		for (column = 0; column <= n; column++)
 		{
 			product = (row * column);
 			if (column == 0)
-				-putchar('0' + product);
+				_putchar('0' + product);
 			else
 			{
 				_putchar(',');
@@ -41,7 +41,8 @@ void print_times_table(int n)
 				else if (product >= 100)
 				{
 					_putchar('0' + (product / 100));
-					_putchar('0' + (product / 10) % 10));
+					_putchar('0' + ((product / 10) % 10));
+					_putchar('0' + (product % 10));
 				}
 			}
 		}
