@@ -1,5 +1,5 @@
 #include <ctype.h>
-@include "main.h"
+#include "main.h"
 
 /**
  *_isalpha - checks for upperecase character
