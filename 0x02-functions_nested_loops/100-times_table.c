@@ -1,51 +1,44 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_times_table - prints time table with provide number
- * @n: the provided value by the user
- * Return: Always 0 (Success)
+ * print_times_table - Prints the n times table
+ * @n: number times table (0 < n <= 15)
+ * Return: no return
  */
-
 void print_times_table(int n)
 {
-	int row;
-	int column;
-	int product;
+	int a, b, op;
 
-	if (n < 0 || n >= 15)
-		return;
-	for (row = 0; row <= n; row++)
+	if (n >= 0 && n <= 15)
 	{
-		for (column = 0; column <= n; column++)
+		for (a = 0; a <= n; a++)
 		{
-			product = (row * column);
-			if (column == 0)
-				_putchar('0' + product);
-			else
+			_putchar(48);
+			for (b = 1; b <= n; b++)
 			{
-				_putchar(',');
-				_putchar(' ');
-				if (product <= 9)
+				op = a * b;
+				_putchar(44);
+				_putchar(32);
+				if (op <= 9)
 				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar('0' + product);
+				_putchar(32);
+				_putchar(32);
+				_putchar(op + 48);
 				}
-				else if (product > 9 && product < 100)
+				else if (op <= 99)
 				{
-					_putchar(' ');
-					_putchar('0' + (product / 10));
-					_putchar('0' + (product % 10));
+				_putchar(32);
+				_putchar((op / 10) + 48);
+				_putchar((op % 10) + 48);
 				}
-				else if (product >= 100)
+				else
 				{
-					_putchar('0' + (product / 100));
-					_putchar('0' + ((product / 10) % 10));
-					_putchar('0' + (product % 10));
+				_putchar(((op / 100) % 10) + 48);
+				_putchar(((op / 10) % 10) + 48);
+				_putchar((op % 10) + 48);
 				}
 			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
