@@ -6,7 +6,7 @@
  *        terms not exceeding 4000000
  * Return: Always 0.
  */
-unt main(void)
+int main(void)
 {
 	unsigned long fib1 = 0, fib2 = 1, fibsum;
 	float tot_sum;
@@ -21,6 +21,6 @@ unt main(void)
 	fib1 = fib2;
 	fib2 = fibsum;
 	}
-	printf("%.of\n", tot_sum);
+	printf("%.0f\n", tot_sum);
 	return (0);
 }
